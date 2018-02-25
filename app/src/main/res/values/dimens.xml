@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginEdges">16sp</dimen>
+    <dimen name="marginBasic">8sp</dimen>
+    <dimen name="marginSmall">4sp</dimen>
+    <dimen name="marginBig">16sp</dimen>
+    <dimen name="checkBoxPaddingLeft">10dp</dimen>
+    <dimen name="textSizeTitle">34sp</dimen>
+    <dimen name="textSizeIntroduction">16sp</dimen>
+    <dimen name="textSizeQuestionTag">12sp</dimen>
+    <dimen name="textSizeQuestion">16sp</dimen>
+    <dimen name="textSizeAnswers">16sp</dimen>
+    <dimen name="textSizeCheckButton">12sp</dimen>
+    <dimen name="cardElevation">8dp</dimen>
+    <dimen name="cardCornerRadius">4dp</dimen>
+</resources>

@@ -1,0 +1,101 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Card view style -->
+    <style name="CardViewStyle" parent="CardView">
+        <item name="android:layout_margin">@dimen/marginEdges</item>
+        <item name="contentPadding">@dimen/marginEdges</item>
+        <item name="cardBackgroundColor">@color/cardViewBackground</item>
+        <item name="cardElevation">@dimen/cardElevation</item>
+        <item name="cardCornerRadius">@dimen/cardCornerRadius</item>
+    </style>
+
+    <!-- Question tag TextView style -->
+    <style name="TextViewQuestionTagStyle" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginBottom">@dimen/marginBig</item>
+        <item name="android:textSize">@dimen/textSizeQuestionTag</item>
+        <item name="android:textColor">@color/textCardView</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!-- Question TextView style -->
+    <style name="questionTextViewStyle" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/marginBig</item>
+        <item name="android:textSize">@dimen/textSizeQuestion</item>
+        <item name="android:textColor">@color/textCardView</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!-- CheckBox style -->
+    <style name="CheckBoxStyle" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textSizeAnswers</item>
+        <item name="android:layout_marginVertical">@dimen/marginSmall</item>
+        <item name="android:buttonTint">@color/textCardView</item>
+        <item name="android:textColor">@color/textCardView</item>
+        <item name="android:paddingLeft">@dimen/checkBoxPaddingLeft</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:padding">@dimen/marginBasic</item>
+    </style>
+
+    <!-- Check question button style -->
+    <style name="CheckQuestionButtonStyle" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:backgroundTint">@color/checkButtonTint</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/textSizeCheckButton</item>
+        <item name="android:textColor">@color/checkButtonTextColor</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_margin">@dimen/marginEdges</item>
+    </style>
+
+    <!-- Radio button images style -->
+    <style name="radioButtonImageStyle" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/marginEdges</item>
+        <item name="android:paddingLeft">@dimen/marginBasic</item>
+        <item name="android:buttonTint">@color/textCardView</item>
+    </style>
+
+    <!-- Radio button text style -->
+    <style name="radioButtonTextStyle" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/marginEdges</item>
+        <item name="android:paddingLeft">@dimen/marginBasic</item>
+        <item name="android:buttonTint">@color/textCardView</item>
+        <item name="android:textColor">@color/textCardView</item>
+        <item name="android:textSize">@dimen/textSizeAnswers</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!-- Edit text style -->
+    <style name="editTextStyle" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/edit_text_hint</item>
+        <item name="android:textColorHint">@color/editTextHintColor</item>
+        <item name="android:backgroundTint">@color/textCardView</item>
+        <item name="android:layout_margin">@dimen/marginBasic</item>
+        <item name="android:textColor">@color/textCardView</item>
+    </style>
+
+</resources>
