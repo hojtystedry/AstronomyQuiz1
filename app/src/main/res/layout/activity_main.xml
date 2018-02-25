@@ -3,693 +3,631 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.astronomyquiz1.MainActivity"
-    >
+    tools:context="com.example.android.astronomyquiz1.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/background"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title"
-            android:textAllCaps="true"
-            android:textColor="@color/textOnBackground"
-            android:textSize="@dimen/textSizeTitle"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="center"
-            android:layout_marginHorizontal="@dimen/marginEdges"
-            android:layout_marginTop="@dimen/marginEdges"
-            android:layout_marginBottom="@dimen/marginBasic"
-            android:background="@color/basicTextViewBackground"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/textOnBackground"
-            android:fontFamily="sans-serif-light"
-            android:gravity="left"
-            android:textSize="@dimen/textSizeIntroduction"
-            android:layout_marginHorizontal="@dimen/marginEdges"
-            android:layout_marginBottom="@dimen/marginBasic"
-            android:background="@color/basicTextViewBackground"
-            android:padding="@dimen/marginBasic"
-            android:text="@string/introduction" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginBasic"
+                android:layout_marginHorizontal="@dimen/marginEdges"
+                android:layout_marginTop="@dimen/marginEdges"
+                android:background="@color/basicTextViewBackground"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/title"
+                android:textAllCaps="true"
+                android:textColor="@color/textOnBackground"
+                android:textSize="@dimen/textSizeTitle" />
 
-        <android.support.v7.widget.CardView
-            style="@style/CardViewStyle"
-            android:id="@+id/card_q1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginBasic"
+                android:layout_marginHorizontal="@dimen/marginEdges"
+                android:background="@color/basicTextViewBackground"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left"
+                android:padding="@dimen/marginBasic"
+                android:text="@string/introduction"
+                android:textColor="@color/textOnBackground"
+                android:textSize="@dimen/textSizeIntroduction" />
 
-            <RelativeLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q1"
+                style="@style/CardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q1_tag"
-                    android:text="@string/q1"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q1_question"
-                    android:layout_below="@id/q1_tag"
-                    android:text="@string/q1_question"
-                    />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q1_a1"
-                    android:layout_below="@id/q1_question"
-                    android:text="@string/q1_a1"
-                    />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q1_a2"
-                    android:layout_below="@id/q1_a1"
-                    android:text="@string/q1_a2"
-                    />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q1_a3"
-                    android:layout_below="@id/q1_a2"
-                    android:text="@string/q1_a3"
-                    />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q1_a4"
-                    android:layout_below="@id/q1_a3"
-                    android:text="@string/q1_a4"
-                    />
-
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q1_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q1_a4"
-                    android:onClick="evaluateQuestion1"
-                    />
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-
-        <android.support.v7.widget.CardView
-            style="@style/CardViewStyle"
-            android:id="@+id/card_q2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q2_tag"
-                    android:text="@string/q2_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q2_question"
-                    android:layout_below="@id/q2_tag"
-                    android:text="@string/q2_question" />
-
-                <RadioGroup
-                    android:id="@+id/q2_radiogroup"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/q2_question"
-                    android:gravity="center"
-                    >
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    style="@style/radioButtonImageStyle"
-                    android:id="@+id/q2_a1_radiobutton"
-                    android:drawableLeft="@drawable/eris"
-                    />
+                    <TextView
+                        android:id="@+id/txt_q1_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q1" />
 
-                    <RadioButton
-                        style="@style/radioButtonImageStyle"
-                        android:id="@+id/q2_a2_radiobutton"
-                        android:drawableLeft="@drawable/haumea"
-                        />
+                    <TextView
+                        android:id="@+id/txt_q1_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q1_tag"
+                        android:text="@string/q1_question" />
 
-                    <RadioButton
-                        style="@style/radioButtonImageStyle"
-                        android:id="@+id/q2_a3_radiobutton"
-                        android:drawableLeft="@drawable/makemake"/>
+                    <CheckBox
+                        android:id="@+id/chb_q1_a1"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/txt_q1_question"
+                        android:text="@string/q1_a1" />
 
-                    <RadioButton
-                        style="@style/radioButtonImageStyle"
-                        android:id="@+id/q2_a4_radiobutton"
-                        android:drawableLeft="@drawable/pluto"/>
+                    <CheckBox
+                        android:id="@+id/chb_q1_a2"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q1_a1"
+                        android:text="@string/q1_a2" />
 
-                </RadioGroup>
+                    <CheckBox
+                        android:id="@+id/chb_q1_a3"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q1_a2"
+                        android:text="@string/q1_a3" />
 
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q2_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q2_radiogroup"
-                    android:onClick="evaluateQuestion2"/>
+                    <CheckBox
+                        android:id="@+id/chb_q1_a4"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q1_a3"
+                        android:text="@string/q1_a4" />
 
+                    <Button
+                        android:id="@+id/btn_q1_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/chb_q1_a4"
+                        android:onClick="checkQuestion1"
+                        android:text="@string/button_text" />
 
+                </RelativeLayout>
 
-            </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
-        </android.support.v7.widget.CardView>
-
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_q3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardViewStyle">
-
-            <RelativeLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q2"
+                style="@style/CardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q3_tag"
-                    android:text="@string/q3_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q3_question"
-                    android:layout_below="@id/q3_tag"
-                    android:text="@string/q3_question" />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q3_a1"
-                    android:layout_below="@id/q3_question"
-                    android:text="@string/q3_a1" />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q3_a2"
-                    android:layout_below="@id/q3_a1"
-                    android:text="@string/q3_a2" />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q3_a3"
-                    android:layout_below="@id/q3_a2"
-                    android:text="@string/q3_a3" />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q3_a4"
-                    android:layout_below="@id/q3_a3"
-                    android:text="@string/q3_a4" />
-
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q3_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q3_a4"
-                    android:onClick="evaluateQuestion3"/>
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_q4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardViewStyle">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q4_tag"
-                    android:text="@string/q4_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q4_question"
-                    android:maxLines="10"
-                    android:layout_below="@id/q4_tag"
-                    android:text="@string/q4_question" />
-
-                <EditText
-                    style="@style/editTextStyle"
-                    android:id="@+id/q4_edittext"
-                    android:layout_below="@id/q4_question"/>
-
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q4_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q4_edittext"
-                    android:onClick="evaluateQuestion4"/>
-
-
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_q5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardViewStyle">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q5_tag"
-                    android:text="@string/q5_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q5_question"
-                    android:layout_below="@id/q5_tag"
-                    android:text="@string/q5__question" />
-
-                <RadioGroup
-                    android:id="@+id/q5_radiogroup"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/q5_question"
-                    android:gravity="left">
+                    android:layout_height="wrap_content">
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q5_a1_radiobutton"
-                        android:text="@string/q5_a1"
-                        />
+                    <TextView
+                        android:id="@+id/txt_q2_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q2_tag" />
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q5_a2_radiobutton"
-                        android:text="@string/q5_a2"
-                        />
+                    <TextView
+                        android:id="@+id/txt_q2_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q2_tag"
+                        android:text="@string/q2_question" />
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q5_a3_radiobutton"
-                        android:text="@string/q5_a3"
-                        />
+                    <RadioGroup
+                        android:id="@+id/rdg_q2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_q2_question"
+                        android:gravity="center">
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q5_a4_radiobutton"
-                        android:text="@string/q5_a4"
-                        />
+                        <RadioButton
+                            android:id="@+id/rbtn_q2_a1"
+                            style="@style/radioButtonImageStyle"
+                            android:drawableLeft="@drawable/eris" />
 
+                        <RadioButton
+                            android:id="@+id/rbtn_q2_a2"
+                            style="@style/radioButtonImageStyle"
+                            android:drawableLeft="@drawable/haumea" />
 
+                        <RadioButton
+                            android:id="@+id/rbtn_q2_a3"
+                            style="@style/radioButtonImageStyle"
+                            android:drawableLeft="@drawable/makemake" />
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/rbtn_q2_a4"
+                            style="@style/radioButtonImageStyle"
+                            android:drawableLeft="@drawable/pluto" />
 
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q5_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q5_radiogroup"
-                    android:onClick="evaluateQuestion5"/>
+                    </RadioGroup>
 
+                    <Button
+                        android:id="@+id/btn_q2_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/rdg_q2"
+                        android:onClick="checkQuestion2"
+                        android:text="@string/button_text" />
 
+                </RelativeLayout>
 
-            </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_q6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardViewStyle">
-
-            <RelativeLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q3"
+                style="@style/CardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q6_tag"
-                    android:text="@string/q6_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q6_question"
-                    android:layout_below="@id/q6_tag"
-                    android:text="@string/q6_question" />
-
-                <ImageView
-                    android:id="@+id/q6_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/venus"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/q6_question"
-                    android:layout_margin="@dimen/marginBasic"/>
-
-                <RadioGroup
-                    android:id="@+id/q6_radiogroup"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/q6_image"
-                    android:gravity="left">
+                    android:layout_height="wrap_content">
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q6_a1_radiobutton"
-                        android:text="@string/q6_a1"
-                        />
+                    <TextView
+                        android:id="@+id/txt_q3_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q3_tag" />
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q6_a2_radiobutton"
-                        android:text="@string/q6_a2"
-                        />
+                    <TextView
+                        android:id="@+id/txt_q3_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q3_tag"
+                        android:text="@string/q3_question" />
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q6_a3_radiobutton"
-                        android:text="@string/q6_a3"
-                        />
+                    <CheckBox
+                        android:id="@+id/chb_q3_a1"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/txt_q3_question"
+                        android:text="@string/q3_a1" />
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q6_a4_radiobutton"
-                        android:text="@string/q6_a4"
-                        />
+                    <CheckBox
+                        android:id="@+id/chb_q3_a2"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q3_a1"
+                        android:text="@string/q3_a2" />
 
+                    <CheckBox
+                        android:id="@+id/chb_q3_a3"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q3_a2"
+                        android:text="@string/q3_a3" />
 
+                    <CheckBox
+                        android:id="@+id/chb_q3_a4"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q3_a3"
+                        android:text="@string/q3_a4" />
 
-                </RadioGroup>
+                    <Button
+                        android:id="@+id/btn_q3_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/chb_q3_a4"
+                        android:onClick="checkQuestion3"
+                        android:text="@string/button_text" />
 
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q6_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q6_radiogroup"
-                    android:onClick="evaluateQuestion6"/>
+                </RelativeLayout>
 
+            </android.support.v7.widget.CardView>
 
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_q7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardViewStyle">
-
-            <RelativeLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q4"
+                style="@style/CardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q7_tag"
-                    android:text="@string/q7_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q7_question"
-                    android:layout_below="@id/q7_tag"
-                    android:text="@string/q7_question" />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q7_a1"
-                    android:layout_below="@id/q7_question"
-                    android:text="@string/q7_a1" />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q7_a2"
-                    android:layout_below="@id/q7_a1"
-                    android:text="@string/q7_a2" />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q7_a3"
-                    android:layout_below="@id/q7_a2"
-                    android:text="@string/q7_a3" />
-
-                <CheckBox
-                    style="@style/CheckBoxStyle"
-                    android:id="@+id/q7_a4"
-                    android:layout_below="@id/q7_a3"
-                    android:text="@string/q7_a4" />
-
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q7_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q7_a4"
-                    android:onClick="evaluateQuestion7"/>
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_q8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardViewStyle">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q8_tag"
-                    android:text="@string/q8_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q8_question"
-                    android:layout_below="@id/q8_tag"
-                    android:text="@string/q8_question" />
-
-                <ImageView
-                    android:id="@+id/q8_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/saturn"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/q8_question"
-                    android:layout_margin="@dimen/marginBasic"/>
-
-                <EditText
-                    style="@style/editTextStyle"
-                    android:id="@+id/q8_edittext"
-                    android:layout_below="@id/q8_image"/>
-
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q8_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q8_edittext"
-                    android:onClick="evaluateQuestion8"/>
-
-
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_q9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardViewStyle">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q9_tag"
-                    android:text="@string/q9_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q9_question"
-                    android:layout_below="@id/q9_tag"
-                    android:text="@string/q9_question" />
-
-                <RadioGroup
-                    android:id="@+id/q9_radiogroup"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/q9_question"
-                    android:gravity="left">
+                    android:layout_height="wrap_content">
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q9_a1_radiobutton"
-                        android:text="@string/q9_a1"
-                        />
+                    <TextView
+                        android:id="@+id/txt_q4_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q4_tag" />
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q9_a2_radiobutton"
-                        android:text="@string/q9_a2"
-                        />
+                    <TextView
+                        android:id="@+id/txt_q4_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q4_tag"
+                        android:text="@string/q4_question" />
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q9_a3_radiobutton"
-                        android:text="@string/q9_a3"
-                        />
+                    <EditText
+                        android:id="@+id/edtxt_q4"
+                        style="@style/editTextStyle"
+                        android:layout_below="@id/txt_q4_question" />
 
-                    <RadioButton
-                        style="@style/radioButtonTextStyle"
-                        android:id="@+id/q9_a4_radiobutton"
-                        android:text="@string/q9_a4"
-                        />
+                    <Button
+                        android:id="@+id/btn_q4_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/edtxt_q4"
+                        android:onClick="checkQuestion4"
+                        android:text="@string/button_text" />
 
+                </RelativeLayout>
 
+            </android.support.v7.widget.CardView>
 
-                </RadioGroup>
-
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q9_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q9_radiogroup"
-                    android:onClick="evaluateQuestion9"/>
-
-
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_q10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/CardViewStyle">
-
-            <RelativeLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q5"
+                style="@style/CardViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    style="@style/TextViewQuestionTagStyle"
-                    android:id="@+id/q10_tag"
-                    android:text="@string/q10_tag"
-                    />
-
-                <TextView
-                    style="@style/questionTextViewStyle"
-                    android:id="@+id/q10_question"
-                    android:layout_below="@id/q10_tag"
-                    android:text="@string/q10_question" />
-
-                <RadioGroup
-                    android:id="@+id/q10_radiogroup"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/q10_question"
-                    android:gravity="center"
-                    >
+                    android:layout_height="wrap_content">
 
-                    <RadioButton
-                        style="@style/radioButtonImageStyle"
-                        android:id="@+id/q10_a1_radiobutton"
-                        android:drawableLeft="@drawable/moon_farside"
-                        />
+                    <TextView
+                        android:id="@+id/txt_q5_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q5_tag" />
 
-                    <RadioButton
-                        style="@style/radioButtonImageStyle"
-                        android:id="@+id/q10_a2_radiobutton"
-                        android:drawableLeft="@drawable/ceres"/>
+                    <TextView
+                        android:id="@+id/txt_q5_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q5_tag"
+                        android:text="@string/q5__question" />
 
-                    <RadioButton
-                        style="@style/radioButtonImageStyle"
-                        android:id="@+id/q10_a3_radiobutton"
-                        android:drawableLeft="@drawable/mercury"/>
+                    <RadioGroup
+                        android:id="@+id/rdg_q5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_q5_question"
+                        android:gravity="left">
 
-                    <RadioButton
-                        style="@style/radioButtonImageStyle"
-                        android:id="@+id/q10_a4_radiobutton"
-                        android:drawableLeft="@drawable/moon"/>
+                        <RadioButton
+                            android:id="@+id/rbtn_q5_a1"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q5_a1" />
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/rbtn_q5_a2"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q5_a2" />
 
-                <Button
-                    style="@style/CheckQuestionButtonStyle"
-                    android:id="@+id/q10_button"
-                    android:text="@string/button_text"
-                    android:layout_below="@id/q10_radiogroup"
-                    android:onClick="evaluateQuestion10"/>
+                        <RadioButton
+                            android:id="@+id/rbtn_q5_a3"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q5_a3" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q5_a4"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q5_a4" />
+
+                    </RadioGroup>
+
+                    <Button
+                        android:id="@+id/btn_q5_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/rdg_q5"
+                        android:onClick="checkQuestion5"
+                        android:text="@string/button_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q6"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_q6_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q6_tag" />
+
+                    <TextView
+                        android:id="@+id/txt_q6_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q6_tag"
+                        android:text="@string/q6_question" />
+
+                    <ImageView
+                        android:id="@+id/img_q6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_q6_question"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/marginBasic"
+                        android:src="@drawable/venus" />
+
+                    <RadioGroup
+                        android:id="@+id/rdg_q6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_q6"
+                        android:gravity="left">
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q6_a1"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q6_a1" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q6_a2"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q6_a2" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q6_a3"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q6_a3" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q6_a4"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q6_a4" />
+
+                    </RadioGroup>
+
+                    <Button
+                        android:id="@+id/btn_q6_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/rdg_q6"
+                        android:onClick="checkQuestion6"
+                        android:text="@string/button_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q7"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_q7_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q7_tag" />
+
+                    <TextView
+                        android:id="@+id/txt_q7_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q7_tag"
+                        android:text="@string/q7_question" />
+
+                    <CheckBox
+                        android:id="@+id/chb_q7_a1"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/txt_q7_question"
+                        android:text="@string/q7_a1" />
+
+                    <CheckBox
+                        android:id="@+id/chb_q7_a2"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q7_a1"
+                        android:text="@string/q7_a2" />
+
+                    <CheckBox
+                        android:id="@+id/chb_q7_a3"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q7_a2"
+                        android:text="@string/q7_a3" />
+
+                    <CheckBox
+                        android:id="@+id/chb_q7_a4"
+                        style="@style/CheckBoxStyle"
+                        android:layout_below="@id/chb_q7_a3"
+                        android:text="@string/q7_a4" />
+
+                    <Button
+                        android:id="@+id/btn_q7_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/chb_q7_a4"
+                        android:onClick="checkQuestion7"
+                        android:text="@string/button_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q8"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_q8_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q8_tag" />
+
+                    <TextView
+                        android:id="@+id/txt_q8_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q8_tag"
+                        android:text="@string/q8_question" />
+
+                    <ImageView
+                        android:id="@+id/img_q8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_q8_question"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/marginBasic"
+                        android:src="@drawable/saturn" />
+
+                    <EditText
+                        android:id="@+id/edtxt_q8"
+                        style="@style/editTextStyle"
+                        android:layout_below="@id/img_q8" />
+
+                    <Button
+                        android:id="@+id/btn_q8_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/edtxt_q8"
+                        android:onClick="checkQuestion8"
+                        android:text="@string/button_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q9"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_q9_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q9_tag" />
+
+                    <TextView
+                        android:id="@+id/txt_q9_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q9_tag"
+                        android:text="@string/q9_question" />
+
+                    <RadioGroup
+                        android:id="@+id/rdg_q9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_q9_question"
+                        android:gravity="left">
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q9_a1"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q9_a1" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q9_a2"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q9_a2" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q9_a3"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q9_a3" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q9_a4"
+                            style="@style/radioButtonTextStyle"
+                            android:text="@string/q9_a4" />
 
 
+                    </RadioGroup>
 
-            </RelativeLayout>
+                    <Button
+                        android:id="@+id/btn_q9_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/rdg_q9"
+                        android:onClick="checkQuestion9"
+                        android:text="@string/button_text" />
 
-        </android.support.v7.widget.CardView>
+                </RelativeLayout>
 
-        <Button
-            android:id="@+id/get_score_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/score_button"
-            android:onClick="getScore"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_marginHorizontal="@dimen/marginEdges"
-            android:layout_marginTop="@dimen/marginEdges"
-            android:textColor="@color/checkButtonTextColor"
-            android:textSize="24sp"
-            android:fontFamily="sans-serif-light"/>
+            </android.support.v7.widget.CardView>
 
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_q10"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
+                    <TextView
+                        android:id="@+id/txt_q10_tag"
+                        style="@style/TextViewQuestionTagStyle"
+                        android:text="@string/q10_tag" />
 
+                    <TextView
+                        android:id="@+id/txt_q10_question"
+                        style="@style/questionTextViewStyle"
+                        android:layout_below="@id/txt_q10_tag"
+                        android:text="@string/q10_question" />
 
-    </LinearLayout>
+                    <RadioGroup
+                        android:id="@+id/rdg_q10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_q10_question"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q10_a1"
+                            style="@style/radioButtonImageStyle"
+                            android:drawableLeft="@drawable/moon_farside" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q10_a2"
+                            style="@style/radioButtonImageStyle"
+                            android:drawableLeft="@drawable/ceres" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q10_a3"
+                            style="@style/radioButtonImageStyle"
+                            android:drawableLeft="@drawable/mercury" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_q10_a4"
+                            style="@style/radioButtonImageStyle"
+                            android:drawableLeft="@drawable/moon" />
+
+                    </RadioGroup>
+
+                    <Button
+                        android:id="@+id/btn_q10_check"
+                        style="@style/CheckQuestionButtonStyle"
+                        android:layout_below="@id/rdg_q10"
+                        android:onClick="checkQuestion10"
+                        android:text="@string/button_text" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_get_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/marginEdges"
+                android:layout_marginTop="@dimen/marginEdges"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="sans-serif-light"
+                android:onClick="getScore"
+                android:text="@string/score_button"
+                android:textColor="@color/checkButtonTextColor"
+                android:textSize="24sp" />
+
+        </LinearLayout>
 
     </ScrollView>
 
