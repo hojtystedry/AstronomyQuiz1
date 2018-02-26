@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isAnsweredEditText(int editTextId) {
         // get text from edit text and save as string
         EditText currentEditText = (EditText) findViewById(editTextId);
-        String userAnswer = currentEditText.getText().toString();
+        String userAnswer = currentEditText.getText().toString().trim();
 
         // compare with empty string
         String emptyString = "";
@@ -360,7 +360,7 @@ public class MainActivity extends AppCompatActivity {
 
         // get text from edit text and save as string
         EditText currentEditText = (EditText) findViewById(editTextId);
-        String userAnswer = currentEditText.getText().toString();
+        String userAnswer = currentEditText.getText().toString().trim();
 
         // compare to the correct answer
         if (userAnswer.equals(answer)) {
